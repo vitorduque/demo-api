@@ -14,6 +14,10 @@ Prepare your database if needed
 
     docker-compose exec web rake db:create db:migrate db:seed
 
+To test it
+
+    docker-compose exec web rails test
+
 Create a deploy:
 
     curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": true}'
