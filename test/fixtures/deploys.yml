@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  feature: MyString
+  version: MyString
+  responsible: MyString
+  status: false
+
+two:
+  feature: MyString
+  version: MyString
+  responsible: MyString
+  status: false
