@@ -1,0 +1,28 @@
+version: "2.1"
+
+services:
+  mysql:
+    image: mysql:5.7.20
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-hmysql", "-uroot", "-proot", "--silent"]
+        interval: 5s
+        timeout: 3s
+        retries: 5
+  web:
+    build: .
+    command: rails s -p 3000 -b '0.0.0.0'
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: demo-api
+    depends_on:
+      mysql:
+        condition: service_healthy
