@@ -2,9 +2,17 @@
 
 ### Usage
 
+Clone it
+
+    git clone git@github.com:vitorduque/demo-api.git
+
 Turn it on:
 
     docker-compose up
+
+Prepare your database if needed
+
+    docker-compose exec web rake db:create db:migrate db:seed
 
 Create a deploy:
 
