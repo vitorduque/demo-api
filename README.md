@@ -4,7 +4,7 @@
 
 Clone it
 
-    git clone git@github.com:vitorduque/demo-api.git
+    git clone https://github.com/vitorduque/demo-api.git
 
 Turn it on:
 
