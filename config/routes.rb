@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :deploys
+  resources :deploys, only: [:create, :index]
 end
