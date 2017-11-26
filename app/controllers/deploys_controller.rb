@@ -7,30 +7,14 @@ class DeploysController < ApplicationController
     render json: @deploys
   end
 
-  def show
-    render json: @deploy
-  end
-
   def create
     @deploy = Deploy.new(deploy_params)
 
     if @deploy.save
-      render json: @deploy, status: :created, location: @deploy
-    else
-      render json: @deploy.errors, status: :unprocessable_entity
-    end
-  end
-
-  def update
-    if @deploy.update(deploy_params)
       render json: @deploy
     else
       render json: @deploy.errors, status: :unprocessable_entity
     end
-  end
-
-  def destroy
-    @deploy.destroy
   end
 
   private
