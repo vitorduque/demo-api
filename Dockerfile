@@ -7,9 +7,8 @@ COPY Gemfile* ./
 RUN bundle install
 COPY . .
 
-# RUN bin/rake db:create
-# RUN bin/rake db:migrate
-# RUN bin/rake db:seed
+ENV ENVIRONMENT=development
 
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+
+ENTRYPOINT rails s -e $ENVIRONMENT -b 0.0.0.0
