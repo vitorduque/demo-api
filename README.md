@@ -8,9 +8,9 @@ Clone it
 
 Turn it on:
 
-    docker-compose up
+    docker-compose up -d
 
-Prepare your database if needed
+Prepare your database
 
     docker-compose exec web rake db:create db:migrate db:seed
 
@@ -35,4 +35,4 @@ Retrieve all deploys:
 * [x] Use docker-compose
 * [x] Create deploys endpoint
 * [ ] Generate CSV report
-* [ ] Improve tutorial
+* [x] Improve tutorial
