@@ -34,5 +34,4 @@ Retrieve all deploys:
 * [x] Kickoff
 * [x] Use docker-compose
 * [x] Create deploys endpoint
-* [ ] Generate CSV report
 * [x] Improve tutorial
