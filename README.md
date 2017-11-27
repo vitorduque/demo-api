@@ -51,7 +51,7 @@ Retrieve all deploys:
 
 Build it
 
-    docker built -t api .
+    docker build -t api .
 
 Run it
 
