@@ -4,7 +4,7 @@ class CreateDeploys < ActiveRecord::Migration[5.1]
       t.string :feature
       t.string :version
       t.string :responsible
-      t.boolean :status
+      t.string :status
 
       t.timestamps
     end
