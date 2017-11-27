@@ -28,6 +28,20 @@ Retrieve all deploys:
     curl -XGET localhost:3000/deploys
 
 
+## Run the project simulating production environment
+
+Turn it on in production mode:
+
+    RAILS_ENV=production SECRET_KEY_BASE=$(rake secret) docker-compose up -d
+
+Create a deploy:
+
+    curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": true}'
+
+
+Retrieve all deploys:
+
+    curl -XGET localhost:3000/deploys
 
 ## To-do list
 
