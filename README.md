@@ -43,6 +43,16 @@ Retrieve all deploys:
 
     curl -XGET localhost:3000/deploys
 
+## Running in production
+
+Build it
+
+    docker built -t api .
+
+Run it
+
+    docker run -it -p 3000:3000 -e DB_HOST='your_prod_host' -e DB_USER='your_prod_user' -e DB_PASS='your_prod_pass' -e RAILS_ENV=production -e SECRET_KEY_BASE=$(rake secret) -d api
+
 ## To-do list
 
 * [x] Kickoff
