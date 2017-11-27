@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20171125151552) do
     t.string "feature"
     t.string "version"
     t.string "responsible"
-    t.boolean "status"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
