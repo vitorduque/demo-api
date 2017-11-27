@@ -49,3 +49,5 @@ Retrieve all deploys:
 * [x] Use docker-compose
 * [x] Create deploys endpoint
 * [x] Improve tutorial
+* [x] Production ready
+
