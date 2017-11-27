@@ -34,6 +34,10 @@ Turn it on in production mode:
 
     RAILS_ENV=production SECRET_KEY_BASE=$(rake secret) docker-compose up -d
 
+Run migration
+
+    docker-compose exec web rake db:migrate RAILS_ENV=production
+
 Create a deploy:
 
     curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": "Another thing happend"}'

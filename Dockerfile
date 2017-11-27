@@ -7,8 +7,6 @@ COPY Gemfile* ./
 RUN bundle install
 COPY . .
 
-ENV RAILS_ENV=development
-
 EXPOSE 3000
 
-ENTRYPOINT if [ "$RAILS_ENV" = "production" ]; then rake db:migrate && rails s -b 0.0.0.0; else rails s -b 0.0.0.0; fi
+ENTRYPOINT rails s -p 3000 -b 0.0.0.0
