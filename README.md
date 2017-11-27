@@ -1,6 +1,6 @@
 # Demo-api
 
-### Usage
+### Running locally
 
 Clone it
 
