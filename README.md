@@ -1,6 +1,6 @@
 # Demo-api
 
-### Running locally
+## Running locally
 
 Clone it
 
@@ -28,7 +28,7 @@ Retrieve all deploys:
     curl -XGET localhost:3000/deploys
 
 
-### Run the project simulating production environment
+## Run the project simulating production environment
 
 Turn it on in production mode:
 
