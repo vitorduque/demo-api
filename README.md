@@ -20,7 +20,7 @@ To test it
 
 Create a deploy:
 
-    curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": "Another thing happend"}'
+    curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": "Another thing happened"}'
 
 
 Retrieve all deploys:
@@ -40,7 +40,7 @@ Run migration
 
 Create a deploy:
 
-    curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": "Another thing happend"}'
+    curl -XPOST localhost:3000/deploys -H "Content-Type: application/json" -d '{"feature": "Some useful feature created by some awesome developer :D", "version": "0.0.4", "responsible": "Mondingnas Burrwhit", "status": "Another thing happened"}'
 
 
 Retrieve all deploys:
@@ -58,7 +58,8 @@ Export env vars
     export DB_HOST='your_prod_host' && export DB_USER='your_prod_user' && export DB_PASS='your_prod_pass' && export RAILS_ENV=production
 
 Run migrations (considering that you already have a schema in
-production, if you don't, you need to create it)
+production, if you don't, you need to create it with rake db:create
+before)
 
     rake db:migrate
 
